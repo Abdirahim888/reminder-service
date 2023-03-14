@@ -18,7 +18,6 @@ app.get('/test', (req, res) => {
     res.send('Reminder service is running!')
 })
 
-
 // Iterate over environment variables and generate reminder objects
 for (let i = 1; i <= 8; i++) {
     const nameKey = `REMINDERS_USER_${i}_NAME`;
@@ -45,8 +44,6 @@ for (let i = 1; i <= 8; i++) {
 
 cron.schedule('* * * * *', () => {
     const today = new Date();
-    today.setDate(new Date().getDate() + 6)
-    console.log('Current time is: ', today);
     const dayOfWeek = today.getDay();
 
     // isSecondMonday is used for every second monday
