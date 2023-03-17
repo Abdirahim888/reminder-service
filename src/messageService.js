@@ -14,11 +14,11 @@ export function sendMessage(reminder) {
 
     client.messages.create(messageOptions, (err, message) => {
         if (err) {
-            console.log(`Message was not sent to ${reminder.phones}!`);
+            console.log(`\n\nMessage was not sent to ${reminder.phones}!\n\n`);
             return console.log(err);
         }
 
-        console.log(`A message sent to ${reminder.phones.join(', ')} at ${getCurrentTime()} with the following message:\n${message.body}\n\n`);
+        console.log(`\n\nA message sent to ${reminder.phones.join(', ')} at ${getCurrentTime()} with the following message:\n\n${message.body}\n\n`);
     });
 }
 
