@@ -2,9 +2,10 @@
   "name": "reminder-service",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node src/serve.js",
+    "dev": "nodemon src/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Abdi",
@@ -12,8 +13,13 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "node-cron": "^3.0.2",
-    "twilio": "^4.8.0"
+    "messagebird": "^4.0.1",
+    "node-cron": "^3.0.2"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node-cron": "^3.0.7",
+    "nodemon": "^2.0.21"
+  }
 }
