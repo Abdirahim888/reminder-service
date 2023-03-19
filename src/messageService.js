@@ -1,5 +1,5 @@
 import { initClient } from 'messagebird';
-import { config } from "dotenv";
+import { config } from 'dotenv';
 
 config();
 
@@ -25,9 +25,9 @@ export function sendMessage(reminder) {
 function getCurrentTime() {
     const now = new Date();
     const year = now.getFullYear();
-    const month = now.getMonth() + 1;
-    const day = now.getDate();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
     return `${year}-${month}-${day} ${hours}:${minutes}`;
 }
