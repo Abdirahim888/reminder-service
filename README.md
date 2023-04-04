@@ -19,7 +19,7 @@ This is a simple Node.js application that sends scheduled reminders using the Me
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/reminder-service.git
+git clone https://github.com/Abdirahim888/reminder-service.git
 ```
 
 2. Install dependencies:
