@@ -18,6 +18,6 @@ RUN npm install
 # Copy Source Files
 COPY . .
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD [ "node", "src/server.js" ]
